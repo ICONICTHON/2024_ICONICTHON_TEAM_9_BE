@@ -7,7 +7,10 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import java.util.ArrayList;
+import java.util.List;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -25,53 +28,60 @@ public class LectureSchedule {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "lecture_schedule_id")
-    private Long id;
+    private Long id; // 강의 일정 ID
 
-    private String courseCode;
+    private String courseCode; // 학수강좌번호
 
-    private String courseName;
+    private String courseName; // 교과목명
 
-    private Integer gradeLevel;
+    private String gradeLevel; // 학년
 
-    private String curriculum;
+    private String curriculum; // 교과과정
 
-    private String subjectArea;
+    private String subjectArea; // 교과영역구분
 
-    private String instructorName;
+    private String instructorName; // 교원명
 
-    private String remarks;
+    private String remarks; // 비고
 
-    private String campus;
+    private String campus; // 수업 캠퍼스
 
-    private String classSchedule; // 요일&교시
+    private String classSchedule; // 요일 및 교시
 
-    private String classRoom;
+    private String classRoom; // 강의실
 
-    private Integer credit;
+    private Integer credit; // 학점
 
-    private Integer thoeryCredit;
+    private Integer thoeryCredit; // 이론 학점
 
-    private Integer practiceCredit;
+    private Integer practiceCredit; // 실습 학점
 
-    private Integer engineerDesignCredit;
+    private Integer engineerDesignCredit; // 공학 설계 학점
 
-    private String lectureType;
+    private String lectureType; // 강의 유형
 
-    private String lectureCategory;
+    private String lectureCategory; // 강의 종류
 
-    private Boolean isEnglish;
+    private String isEnglish; // 원어 강의 여부
 
-    private String completionType;
+    private String completionType; // 이수 구분
 
-    private String openingCollege;
+    private String openingCollege; // 개설 대학
 
-    private String openingDepartment;
+    private String openingDepartment; // 개설 학부
 
-    private String openingMajor;
+    private String openingMajor; // 개설 학과
 
-    private String englishCourseName;
+    private String englishCourseName; // 교과목 영문명
 
-/*    @ManyToOne
-    @JoinColumn(name = "lecture_schedule_id")
-    private LectureSchedule child;*/
+/*
+    @ManyToOne
+    @JoinColumn(name = "prerequisite_id")
+    private LectureSchedule prerequisite; // 선수 과목
+
+    @OneToMany(mappedBy = "prerequisite")
+    @Builder.Default
+    private List<LectureSchedule> dependents = new ArrayList<>(); // 후수 과목 목록
+*/
 }
+
