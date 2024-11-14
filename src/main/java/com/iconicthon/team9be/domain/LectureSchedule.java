@@ -1,4 +1,4 @@
-package com.iconicthon.domain;
+package com.iconicthon.team9be.domain;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
