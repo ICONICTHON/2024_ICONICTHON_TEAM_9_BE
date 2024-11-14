@@ -1,5 +1,6 @@
 package com.iconicthon.team9be.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -74,14 +75,16 @@ public class LectureSchedule {
 
     private String englishCourseName; // 교과목 영문명
 
-/*
+    private String semester; // 개설 학기
+
     @ManyToOne
     @JoinColumn(name = "prerequisite_id")
+    @JsonIgnore
     private LectureSchedule prerequisite; // 선수 과목
 
     @OneToMany(mappedBy = "prerequisite")
     @Builder.Default
+    @JsonIgnore
     private List<LectureSchedule> dependents = new ArrayList<>(); // 후수 과목 목록
-*/
 }
 

@@ -5,7 +5,7 @@
 
 # 현재 시간으로 태그 생성
 TIMESTAMP=$(date +%Y%m%d%H%M%S)
-IMAGE_NAME="limwngur/iiie-server-app:$TIMESTAMP"
+IMAGE_NAME="limwngur/iconic-server-app:$TIMESTAMP"
 
 # Docker 이미지 빌드
 docker build -t $IMAGE_NAME .
@@ -17,7 +17,7 @@ else
   echo "Docker 이미지 빌드 중 오류가 발생했습니다."
   exit 1
 fi
-d
+
 # Docker Hub에 이미지 push
 echo "Docker Hub에 이미지 '$IMAGE_NAME'를 push 중..."
 docker push $IMAGE_NAME

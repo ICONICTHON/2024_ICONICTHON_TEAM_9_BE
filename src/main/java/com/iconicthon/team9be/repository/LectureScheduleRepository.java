@@ -1,6 +1,7 @@
 package com.iconicthon.team9be.repository;
 
 import com.iconicthon.team9be.domain.LectureSchedule;
+import com.iconicthon.team9be.dto.LectureScheduleProjection;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -30,6 +31,4 @@ public interface LectureScheduleRepository extends JpaRepository<LectureSchedule
             String openingDepartment, String openingMajor, String campus,
             String lectureCategory, String classSchedule, String instructorName,
             String keyword);
-
-
 }

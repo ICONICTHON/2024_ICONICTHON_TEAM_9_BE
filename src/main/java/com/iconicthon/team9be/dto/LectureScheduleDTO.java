@@ -42,5 +42,4 @@ public class LectureScheduleDTO {
 
         private String keyword; // 학수강좌번호 OR 교과목명
     }
-
 }

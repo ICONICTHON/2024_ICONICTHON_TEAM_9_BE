@@ -33,4 +33,9 @@ public class LectureScheduleService {
         );
     }
 
+
+/*
+    public void getLecturesForPathWay(String majorName) {
+        lectureScheduleRepository.findLecturesByMajorName(majorName);
+    }*/
 }
