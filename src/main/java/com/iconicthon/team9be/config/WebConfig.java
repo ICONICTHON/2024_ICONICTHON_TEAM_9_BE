@@ -1,3 +1,4 @@
+/*
 package com.iconicthon.team9be.config;
 
 import org.springframework.context.annotation.Bean;
@@ -17,3 +18,4 @@ public class WebConfig implements WebMvcConfigurer {
     }
 }
 
+*/

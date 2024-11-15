@@ -1,6 +1,8 @@
 package com.iconicthon.team9be.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 public class LectureScheduleDTO {
@@ -29,6 +31,8 @@ public class LectureScheduleDTO {
 
     @Getter
     @Setter
+    @AllArgsConstructor
+    @NoArgsConstructor
     public static class SearchRequest {
         private String curriculum; // 교과과정
         private String subjectArea; // 교과영역구분

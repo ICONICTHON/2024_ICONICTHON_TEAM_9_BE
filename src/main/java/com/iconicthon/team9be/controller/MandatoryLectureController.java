@@ -1,6 +1,5 @@
 package com.iconicthon.team9be.controller;
 
-import com.iconicthon.team9be.domain.MandatoryLecture;
 import com.iconicthon.team9be.dto.MandatoryLectureDTO;
 import com.iconicthon.team9be.service.MandatoryLectureService;
 import com.iconicthon.team9be.util.SuccessResponse;
